@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E216D47E1D1C861000DD442E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D47D1D1C861000DD442E /* main.m */; };
+		E216D4811D1C861000DD442E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4801D1C861000DD442E /* AppDelegate.m */; };
+		E216D4841D1C861000DD442E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4831D1C861000DD442E /* MasterViewController.m */; };
+		E216D4871D1C861000DD442E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4861D1C861000DD442E /* DetailViewController.m */; };
+		E216D48A1D1C861000DD442E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E216D4881D1C861000DD442E /* Main.storyboard */; };
+		E216D48C1D1C861100DD442E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E216D48B1D1C861100DD442E /* Assets.xcassets */; };
+		E216D48F1D1C861100DD442E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E216D48D1D1C861100DD442E /* LaunchScreen.storyboard */; };
+		E216D4B51D1C8EED00DD442E /* ECCreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4B41D1C8EED00DD442E /* ECCreditCard.m */; };
+		E216D4B81D1C8FD400DD442E /* ECCreditCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4B71D1C8FD400DD442E /* ECCreditCardTests.m */; };
+		E216D4BB1D1DC01100DD442E /* PetStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4BA1D1DC01100DD442E /* PetStore.m */; };
+		E216D4BE1D1F838500DD442E /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4BD1D1F838500DD442E /* Pet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E216D4961D1C861100DD442E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E216D4711D1C860E00DD442E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E216D4781D1C860F00DD442E;
+			remoteInfo = "Ebay Code Challenge";
+		};
+		E216D4A11D1C861100DD442E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E216D4711D1C860E00DD442E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E216D4781D1C860F00DD442E;
+			remoteInfo = "Ebay Code Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E216D4791D1C860F00DD442E /* Ebay Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ebay Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E216D47D1D1C861000DD442E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E216D47F1D1C861000DD442E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E216D4801D1C861000DD442E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E216D4821D1C861000DD442E /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		E216D4831D1C861000DD442E /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		E216D4851D1C861000DD442E /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E216D4861D1C861000DD442E /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E216D4891D1C861000DD442E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E216D48B1D1C861100DD442E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E216D48E1D1C861100DD442E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E216D4901D1C861100DD442E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E216D4951D1C861100DD442E /* Ebay Code ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ebay Code ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E216D49B1D1C861100DD442E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E216D4A01D1C861100DD442E /* Ebay Code ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ebay Code ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E216D4B41D1C8EED00DD442E /* ECCreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCreditCard.m; sourceTree = "<group>"; };
+		E216D4B61D1C8F1200DD442E /* ECCreditCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECCreditCard.h; sourceTree = "<group>"; };
+		E216D4B71D1C8FD400DD442E /* ECCreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCreditCardTests.m; sourceTree = "<group>"; };
+		E216D4B91D1DBE7C00DD442E /* PetStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PetStore.h; sourceTree = "<group>"; };
+		E216D4BA1D1DC01100DD442E /* PetStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetStore.m; sourceTree = "<group>"; };
+		E216D4BC1D1F837000DD442E /* Pet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		E216D4BD1D1F838500DD442E /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E216D4761D1C860F00DD442E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E216D4921D1C861100DD442E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E216D49D1D1C861100DD442E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E216D4701D1C860E00DD442E = {
+			isa = PBXGroup;
+			children = (
+				E216D47B1D1C861000DD442E /* Ebay Code Challenge */,
+				E216D4981D1C861100DD442E /* Ebay Code ChallengeTests */,
+				E216D47A1D1C860F00DD442E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E216D47A1D1C860F00DD442E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E216D4791D1C860F00DD442E /* Ebay Code Challenge.app */,
+				E216D4951D1C861100DD442E /* Ebay Code ChallengeTests.xctest */,
+				E216D4A01D1C861100DD442E /* Ebay Code ChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E216D47B1D1C861000DD442E /* Ebay Code Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				E216D4B61D1C8F1200DD442E /* ECCreditCard.h */,
+				E216D4B41D1C8EED00DD442E /* ECCreditCard.m */,
+				E216D4821D1C861000DD442E /* MasterViewController.h */,
+				E216D4831D1C861000DD442E /* MasterViewController.m */,
+				E216D4851D1C861000DD442E /* DetailViewController.h */,
+				E216D4861D1C861000DD442E /* DetailViewController.m */,
+				E216D4BC1D1F837000DD442E /* Pet.h */,
+				E216D4BD1D1F838500DD442E /* Pet.m */,
+				E216D4B91D1DBE7C00DD442E /* PetStore.h */,
+				E216D4BA1D1DC01100DD442E /* PetStore.m */,
+				E216D4881D1C861000DD442E /* Main.storyboard */,
+				E216D48B1D1C861100DD442E /* Assets.xcassets */,
+				E216D48D1D1C861100DD442E /* LaunchScreen.storyboard */,
+				E216D4901D1C861100DD442E /* Info.plist */,
+				E216D47F1D1C861000DD442E /* AppDelegate.h */,
+				E216D4801D1C861000DD442E /* AppDelegate.m */,
+				E216D47D1D1C861000DD442E /* main.m */,
+				E216D47C1D1C861000DD442E /* Supporting Files */,
+			);
+			path = "Ebay Code Challenge";
+			sourceTree = "<group>";
+		};
+		E216D47C1D1C861000DD442E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E216D4981D1C861100DD442E /* Ebay Code ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E216D49B1D1C861100DD442E /* Info.plist */,
+				E216D4B71D1C8FD400DD442E /* ECCreditCardTests.m */,
+			);
+			path = "Ebay Code ChallengeTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E216D4781D1C860F00DD442E /* Ebay Code Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E216D4A91D1C861100DD442E /* Build configuration list for PBXNativeTarget "Ebay Code Challenge" */;
+			buildPhases = (
+				E216D4751D1C860F00DD442E /* Sources */,
+				E216D4761D1C860F00DD442E /* Frameworks */,
+				E216D4771D1C860F00DD442E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ebay Code Challenge";
+			productName = "Ebay Code Challenge";
+			productReference = E216D4791D1C860F00DD442E /* Ebay Code Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E216D4941D1C861100DD442E /* Ebay Code ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E216D4AC1D1C861100DD442E /* Build configuration list for PBXNativeTarget "Ebay Code ChallengeTests" */;
+			buildPhases = (
+				E216D4911D1C861100DD442E /* Sources */,
+				E216D4921D1C861100DD442E /* Frameworks */,
+				E216D4931D1C861100DD442E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E216D4971D1C861100DD442E /* PBXTargetDependency */,
+			);
+			name = "Ebay Code ChallengeTests";
+			productName = "Ebay Code ChallengeTests";
+			productReference = E216D4951D1C861100DD442E /* Ebay Code ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E216D49F1D1C861100DD442E /* Ebay Code ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E216D4AF1D1C861100DD442E /* Build configuration list for PBXNativeTarget "Ebay Code ChallengeUITests" */;
+			buildPhases = (
+				E216D49C1D1C861100DD442E /* Sources */,
+				E216D49D1D1C861100DD442E /* Frameworks */,
+				E216D49E1D1C861100DD442E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E216D4A21D1C861100DD442E /* PBXTargetDependency */,
+			);
+			name = "Ebay Code ChallengeUITests";
+			productName = "Ebay Code ChallengeUITests";
+			productReference = E216D4A01D1C861100DD442E /* Ebay Code ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E216D4711D1C860E00DD442E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Caley Davis";
+				TargetAttributes = {
+					E216D4781D1C860F00DD442E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					E216D4941D1C861100DD442E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E216D4781D1C860F00DD442E;
+					};
+					E216D49F1D1C861100DD442E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E216D4781D1C860F00DD442E;
+					};
+				};
+			};
+			buildConfigurationList = E216D4741D1C860E00DD442E /* Build configuration list for PBXProject "Ebay Code Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E216D4701D1C860E00DD442E;
+			productRefGroup = E216D47A1D1C860F00DD442E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E216D4781D1C860F00DD442E /* Ebay Code Challenge */,
+				E216D4941D1C861100DD442E /* Ebay Code ChallengeTests */,
+				E216D49F1D1C861100DD442E /* Ebay Code ChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E216D4771D1C860F00DD442E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E216D48F1D1C861100DD442E /* LaunchScreen.storyboard in Resources */,
+				E216D48C1D1C861100DD442E /* Assets.xcassets in Resources */,
+				E216D48A1D1C861000DD442E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E216D4931D1C861100DD442E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E216D49E1D1C861100DD442E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E216D4751D1C860F00DD442E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E216D4BE1D1F838500DD442E /* Pet.m in Sources */,
+				E216D4811D1C861000DD442E /* AppDelegate.m in Sources */,
+				E216D4841D1C861000DD442E /* MasterViewController.m in Sources */,
+				E216D47E1D1C861000DD442E /* main.m in Sources */,
+				E216D4871D1C861000DD442E /* DetailViewController.m in Sources */,
+				E216D4BB1D1DC01100DD442E /* PetStore.m in Sources */,
+				E216D4B51D1C8EED00DD442E /* ECCreditCard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E216D4911D1C861100DD442E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E216D4B81D1C8FD400DD442E /* ECCreditCardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E216D49C1D1C861100DD442E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E216D4971D1C861100DD442E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E216D4781D1C860F00DD442E /* Ebay Code Challenge */;
+			targetProxy = E216D4961D1C861100DD442E /* PBXContainerItemProxy */;
+		};
+		E216D4A21D1C861100DD442E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E216D4781D1C860F00DD442E /* Ebay Code Challenge */;
+			targetProxy = E216D4A11D1C861100DD442E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E216D4881D1C861000DD442E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E216D4891D1C861000DD442E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E216D48D1D1C861100DD442E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E216D48E1D1C861100DD442E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E216D4A71D1C861100DD442E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E216D4A81D1C861100DD442E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E216D4AA1D1C861100DD442E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Ebay Code Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Caley.Ebay-Code-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E216D4AB1D1C861100DD442E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Ebay Code Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Caley.Ebay-Code-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E216D4AD1D1C861100DD442E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Ebay Code ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Caley.Ebay-Code-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ebay Code Challenge.app/Ebay Code Challenge";
+			};
+			name = Debug;
+		};
+		E216D4AE1D1C861100DD442E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Ebay Code ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Caley.Ebay-Code-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ebay Code Challenge.app/Ebay Code Challenge";
+			};
+			name = Release;
+		};
+		E216D4B01D1C861100DD442E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Ebay Code ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Caley.Ebay-Code-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Ebay Code Challenge";
+			};
+			name = Debug;
+		};
+		E216D4B11D1C861100DD442E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Ebay Code ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Caley.Ebay-Code-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Ebay Code Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E216D4741D1C860E00DD442E /* Build configuration list for PBXProject "Ebay Code Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E216D4A71D1C861100DD442E /* Debug */,
+				E216D4A81D1C861100DD442E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E216D4A91D1C861100DD442E /* Build configuration list for PBXNativeTarget "Ebay Code Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E216D4AA1D1C861100DD442E /* Debug */,
+				E216D4AB1D1C861100DD442E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E216D4AC1D1C861100DD442E /* Build configuration list for PBXNativeTarget "Ebay Code ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E216D4AD1D1C861100DD442E /* Debug */,
+				E216D4AE1D1C861100DD442E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E216D4AF1D1C861100DD442E /* Build configuration list for PBXNativeTarget "Ebay Code ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E216D4B01D1C861100DD442E /* Debug */,
+				E216D4B11D1C861100DD442E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E216D4711D1C860E00DD442E /* Project object */;
+}
