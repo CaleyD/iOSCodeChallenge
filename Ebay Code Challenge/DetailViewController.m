@@ -7,7 +7,7 @@
 #import "Pet.h"
 
 @interface DetailViewController ()
-@property NSArray *animalTypes;
+@property (nonatomic, strong) NSArray *animalTypes;
 @end
 
 @implementation DetailViewController

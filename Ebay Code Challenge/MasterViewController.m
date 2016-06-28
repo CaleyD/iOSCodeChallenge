@@ -8,12 +8,11 @@
 #import "PetStore.h"
 
 @interface MasterViewController () <UISearchResultsUpdating>
-
-@property NSArray *pets;
-@property NSArray *categorizedPets;
-@property PetStore *petStore;
-@property (nonatomic, strong) UIActivityIndicatorView * loadingIndicator;
-@property (nonatomic, strong) UISearchController * searchController;
+@property (nonatomic, strong) NSArray *pets;
+@property (nonatomic, strong) NSArray *categorizedPets;
+@property (nonatomic, strong) PetStore *petStore;
+@property (nonatomic, strong) UIActivityIndicatorView *loadingIndicator;
+@property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSArray *sections;
 @end
 
@@ -29,15 +28,12 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
-        NSArray * pets = [[self.petStore getAllPets] sortedArrayUsingDescriptors:@[sort]];
+        NSArray *pets = [self.petStore getAllPets];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.pets = pets;
             
-            // put pets in a more convenient data format for sorting by animal type
-
-            [self setFriendlyDataSource];
+            [self updateDataSourceAndReloadTableView];
             [self hideLoadingIndicator];
         });
     });
@@ -51,27 +47,34 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
-    
-    // in case properties were modified by the detail view
-    
-    [self setFriendlyDataSource];
-    
+    [self updateDataSourceAndReloadTableView];
     [super viewWillAppear:animated];
 }
 
-- (void)setFriendlyDataSource {
-    NSArray * pets;
-    
-    NSString * searchText = self.searchController.searchBar.text;
+- (void)sortCachedPets {
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    self.pets = [self.pets sortedArrayUsingDescriptors:@[sort]];
+}
+
+- (NSArray *)getPetsOptionallyFilteredBySearch {
+    NSString *searchText = self.searchController.searchBar.text;
     if(searchText == nil || searchText.length == 0) {
-        pets = self.pets;
+        return self.pets;
     } else {
         NSPredicate *textSearch = [NSPredicate predicateWithBlock:^BOOL(Pet *pet, NSDictionary *bindings) {
             return ([pet.name rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound);
         }];
-        pets = [self.pets filteredArrayUsingPredicate:textSearch];
+        return [self.pets filteredArrayUsingPredicate:textSearch];
     }
+}
+
+// populate self.categorizedText => [[animalType, [petOfType, petOfType, ...]], [animalType, [petOfType, petOfType, ...]], ...]
+// for convenience of Table View protocol methods
+- (void)updateDataSourceAndReloadTableView {
+    
+    [self sortCachedPets];
+    
+    NSArray *pets = [self getPetsOptionallyFilteredBySearch];
     
     NSMutableDictionary *petsByAnimal = [[NSMutableDictionary alloc] init];
     for(int i=0; i<pets.count; ++i) {
@@ -88,7 +91,7 @@
     NSMutableArray *categories = [[NSMutableArray alloc] init];
     for(int i=0; i<self.sections.count; ++i) {
         NSString *section = self.sections[i];
-        NSMutableArray *animalsOfType = [petsByAnimal objectForKey:section];
+        NSArray *animalsOfType = [petsByAnimal objectForKey:section];
         if(animalsOfType !=nil && animalsOfType.count > 0) {
             [categories addObject:@[section, animalsOfType]];
         }
@@ -174,7 +177,7 @@
 # pragma - search
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    [self setFriendlyDataSource];
+    [self updateDataSourceAndReloadTableView];
 }
 
 @end
