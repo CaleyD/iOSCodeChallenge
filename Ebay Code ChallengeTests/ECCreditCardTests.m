@@ -10,10 +10,10 @@
 
 @end
 
-NSString * getIssuer(NSString * creditCardNumber) {
+NSString *getIssuer(NSString *creditCardNumber) {
     return [[ECCreditCard alloc] initWithNumber:creditCardNumber].issuer;
 }
-bool getIsValid(NSString * creditCardNumber) {
+bool getIsValid(NSString *creditCardNumber) {
     return [[ECCreditCard alloc] initWithNumber:creditCardNumber].isValid;
 }
 
