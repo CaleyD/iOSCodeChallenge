@@ -82,11 +82,11 @@
 
 # pragma mark - UIPickerViewDataSource
 
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return self.animalTypes.count;
 }
 
