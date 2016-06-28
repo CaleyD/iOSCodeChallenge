@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20D06D91D2239CF005A27B1 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06CA1D2239CF005A27B1 /* cat.png */; };
+		E20D06DA1D2239CF005A27B1 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06CB1D2239CF005A27B1 /* dog.png */; };
+		E20D06DB1D2239CF005A27B1 /* goat.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06CC1D2239CF005A27B1 /* goat.png */; };
+		E20D06DC1D2239CF005A27B1 /* guinea pig.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06CD1D2239CF005A27B1 /* guinea pig.png */; };
+		E20D06DD1D2239CF005A27B1 /* hamster.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06CE1D2239CF005A27B1 /* hamster.png */; };
+		E20D06DE1D2239CF005A27B1 /* horse.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06CF1D2239CF005A27B1 /* horse.png */; };
+		E20D06DF1D2239CF005A27B1 /* lizard.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D01D2239CF005A27B1 /* lizard.png */; };
+		E20D06E01D2239CF005A27B1 /* llama.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D11D2239CF005A27B1 /* llama.png */; };
+		E20D06E21D2239CF005A27B1 /* parrot.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D31D2239CF005A27B1 /* parrot.png */; };
+		E20D06E31D2239CF005A27B1 /* rabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D41D2239CF005A27B1 /* rabbit.png */; };
+		E20D06E41D2239CF005A27B1 /* rat.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D51D2239CF005A27B1 /* rat.png */; };
+		E20D06E51D2239CF005A27B1 /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D61D2239CF005A27B1 /* snake.png */; };
+		E20D06E61D2239CF005A27B1 /* tarantula.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D71D2239CF005A27B1 /* tarantula.png */; };
+		E20D06E71D2239CF005A27B1 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = E20D06D81D2239CF005A27B1 /* turtle.png */; };
 		E216D47E1D1C861000DD442E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D47D1D1C861000DD442E /* main.m */; };
 		E216D4811D1C861000DD442E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4801D1C861000DD442E /* AppDelegate.m */; };
 		E216D4841D1C861000DD442E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E216D4831D1C861000DD442E /* MasterViewController.m */; };
@@ -38,6 +52,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E20D06CA1D2239CF005A27B1 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat.png; path = images/cat.png; sourceTree = "<group>"; };
+		E20D06CB1D2239CF005A27B1 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dog.png; path = images/dog.png; sourceTree = "<group>"; };
+		E20D06CC1D2239CF005A27B1 /* goat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = goat.png; path = images/goat.png; sourceTree = "<group>"; };
+		E20D06CD1D2239CF005A27B1 /* guinea pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guinea pig.png"; path = "images/guinea pig.png"; sourceTree = "<group>"; };
+		E20D06CE1D2239CF005A27B1 /* hamster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hamster.png; path = images/hamster.png; sourceTree = "<group>"; };
+		E20D06CF1D2239CF005A27B1 /* horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = horse.png; path = images/horse.png; sourceTree = "<group>"; };
+		E20D06D01D2239CF005A27B1 /* lizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lizard.png; path = images/lizard.png; sourceTree = "<group>"; };
+		E20D06D11D2239CF005A27B1 /* llama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = llama.png; path = images/llama.png; sourceTree = "<group>"; };
+		E20D06D31D2239CF005A27B1 /* parrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parrot.png; path = images/parrot.png; sourceTree = "<group>"; };
+		E20D06D41D2239CF005A27B1 /* rabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rabbit.png; path = images/rabbit.png; sourceTree = "<group>"; };
+		E20D06D51D2239CF005A27B1 /* rat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rat.png; path = images/rat.png; sourceTree = "<group>"; };
+		E20D06D61D2239CF005A27B1 /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snake.png; path = images/snake.png; sourceTree = "<group>"; };
+		E20D06D71D2239CF005A27B1 /* tarantula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tarantula.png; path = images/tarantula.png; sourceTree = "<group>"; };
+		E20D06D81D2239CF005A27B1 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle.png; path = images/turtle.png; sourceTree = "<group>"; };
 		E216D4791D1C860F00DD442E /* Ebay Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ebay Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E216D47D1D1C861000DD442E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E216D47F1D1C861000DD442E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +162,20 @@
 		E216D47C1D1C861000DD442E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E20D06CA1D2239CF005A27B1 /* cat.png */,
+				E20D06CB1D2239CF005A27B1 /* dog.png */,
+				E20D06CC1D2239CF005A27B1 /* goat.png */,
+				E20D06CD1D2239CF005A27B1 /* guinea pig.png */,
+				E20D06CE1D2239CF005A27B1 /* hamster.png */,
+				E20D06CF1D2239CF005A27B1 /* horse.png */,
+				E20D06D01D2239CF005A27B1 /* lizard.png */,
+				E20D06D11D2239CF005A27B1 /* llama.png */,
+				E20D06D31D2239CF005A27B1 /* parrot.png */,
+				E20D06D41D2239CF005A27B1 /* rabbit.png */,
+				E20D06D51D2239CF005A27B1 /* rat.png */,
+				E20D06D61D2239CF005A27B1 /* snake.png */,
+				E20D06D71D2239CF005A27B1 /* tarantula.png */,
+				E20D06D81D2239CF005A27B1 /* turtle.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,9 +292,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20D06E41D2239CF005A27B1 /* rat.png in Resources */,
+				E20D06E21D2239CF005A27B1 /* parrot.png in Resources */,
 				E216D48F1D1C861100DD442E /* LaunchScreen.storyboard in Resources */,
+				E20D06DE1D2239CF005A27B1 /* horse.png in Resources */,
+				E20D06DA1D2239CF005A27B1 /* dog.png in Resources */,
+				E20D06E71D2239CF005A27B1 /* turtle.png in Resources */,
+				E20D06E61D2239CF005A27B1 /* tarantula.png in Resources */,
+				E20D06DD1D2239CF005A27B1 /* hamster.png in Resources */,
+				E20D06DC1D2239CF005A27B1 /* guinea pig.png in Resources */,
+				E20D06DB1D2239CF005A27B1 /* goat.png in Resources */,
 				E216D48C1D1C861100DD442E /* Assets.xcassets in Resources */,
+				E20D06D91D2239CF005A27B1 /* cat.png in Resources */,
 				E216D48A1D1C861000DD442E /* Main.storyboard in Resources */,
+				E20D06E31D2239CF005A27B1 /* rabbit.png in Resources */,
+				E20D06E01D2239CF005A27B1 /* llama.png in Resources */,
+				E20D06E51D2239CF005A27B1 /* snake.png in Resources */,
+				E20D06DF1D2239CF005A27B1 /* lizard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

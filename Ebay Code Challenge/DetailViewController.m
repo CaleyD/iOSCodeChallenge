@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.animalTypes = @[@"Dog", @"Cat", @"Mouse", @"Parrot", @"Horse", @"Rat", @"Rabbit", @"Hamster", @"Guinea Pig", @"Turtle", @"Snake", @"Tarantula", @"Llama", @"Goat", @"Lizard"];
+    self.animalTypes = [self.petStore getAvailableAnimalTypes];
     
     [self.nameTextField addTarget:self
                            action:@selector(enableSave)

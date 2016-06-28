@@ -10,10 +10,11 @@
 @interface MasterViewController () <UISearchResultsUpdating>
 
 @property NSArray *pets;
-@property NSArray *searchResults;
+@property NSArray *categorizedPets;
 @property PetStore *petStore;
 @property (nonatomic, strong) UIActivityIndicatorView * loadingIndicator;
 @property (nonatomic, strong) UISearchController * searchController;
+@property (nonatomic, strong) NSArray *sections;
 @end
 
 @implementation MasterViewController
@@ -22,8 +23,10 @@
     [super viewDidLoad];
     
     self.petStore = [[PetStore alloc] init];
+    self.sections = [self.petStore getAvailableAnimalTypes];
     
     [self showLoadingIndicator];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
@@ -32,9 +35,10 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.pets = pets;
             
+            // put pets in a more convenient data format for sorting by animal type
+
+            [self setFriendlyDataSource];
             [self hideLoadingIndicator];
-            
-            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
         });
     });
     
@@ -50,20 +54,58 @@
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     
     // in case properties were modified by the detail view
-    [self doTextSearch];
-    [self.tableView reloadData];
+    
+    [self setFriendlyDataSource];
     
     [super viewWillAppear:animated];
+}
+
+- (void)setFriendlyDataSource {
+    NSArray * pets;
+    
+    NSString * searchText = self.searchController.searchBar.text;
+    if(searchText == nil || searchText.length == 0) {
+        pets = self.pets;
+    } else {
+        NSPredicate *textSearch = [NSPredicate predicateWithBlock:^BOOL(Pet *pet, NSDictionary *bindings) {
+            return ([pet.name rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound);
+        }];
+        pets = [self.pets filteredArrayUsingPredicate:textSearch];
+    }
+    
+    NSMutableDictionary *petsByAnimal = [[NSMutableDictionary alloc] init];
+    for(int i=0; i<pets.count; ++i) {
+        Pet *pet = pets[i];
+        
+        NSMutableArray *animalsOfType = [petsByAnimal objectForKey:pet.animalType];
+        if(animalsOfType == nil) {
+            animalsOfType = [[NSMutableArray alloc] init];
+            [petsByAnimal setObject:animalsOfType forKey:pet.animalType];
+        }
+        [animalsOfType addObject:pet];
+    }
+    
+    NSMutableArray *categories = [[NSMutableArray alloc] init];
+    for(int i=0; i<self.sections.count; ++i) {
+        NSString *section = self.sections[i];
+        NSMutableArray *animalsOfType = [petsByAnimal objectForKey:section];
+        if(animalsOfType !=nil && animalsOfType.count > 0) {
+            [categories addObject:@[section, animalsOfType]];
+        }
+    }
+    
+    self.categorizedPets = categories;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Loading indicator
 
 - (void)showLoadingIndicator {
     if(!self.loadingIndicator) {
-        self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+        self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         self.loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
         self.loadingIndicator.center = self.view.center;
-        self.loadingIndicator.backgroundColor = UIColor.whiteColor;
+        self.loadingIndicator.backgroundColor = UIColor.clearColor;
         [self.view addSubview:self.loadingIndicator];
     }
     
@@ -79,7 +121,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Pet *pet = self.pets[indexPath.row];
+        Pet *pet = self.categorizedPets[indexPath.section][1][indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         controller.detailItem = pet;
         controller.petStore = self.petStore;
@@ -91,44 +133,48 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.categorizedPets.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(self.searchResults != nil) {
-        return self.searchResults.count;
-    }
-    return self.pets.count;
+    return ((NSArray *)self.categorizedPets[section][1]).count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    Pet * pet = (self.searchResults != nil) ? self.searchResults[indexPath.row] : self.pets[indexPath.row];
+    
+    NSArray *petsInCategory = self.categorizedPets[indexPath.section][1];
+    
+    Pet *pet = petsInCategory[indexPath.row];
     cell.textLabel.text = pet.name;
-    cell.detailTextLabel.text = pet.animalType;
+    cell.detailTextLabel.text = pet.gender == GenderMale ? @"male" : @"female";
 
     return cell;
+}
+
+-(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"SectionHeader"];
+
+    NSString *animalType = self.categorizedPets[section][0];
+    
+    UILabel *title = [headerView viewWithTag:546];
+    title.text = [NSString stringWithFormat:@"%@s", animalType];
+    
+    UIImageView *img = [headerView viewWithTag:547];
+    // NOTE - purposely letting the image overflow the rounded container for effect
+    img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", animalType]];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
 }
 
 # pragma - search
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    [self doTextSearch];
-    [self.tableView reloadData];
+    [self setFriendlyDataSource];
 }
 
-- (void)doTextSearch {
-    NSString * text = self.searchController.searchBar.text;
-    if(text == nil || text.length == 0) {
-        self.searchResults = nil;
-    } else {
-        NSPredicate *textSearch = [NSPredicate predicateWithBlock:^BOOL(Pet *pet, NSDictionary *bindings) {
-            return
-                ([pet.name rangeOfString:text options:NSCaseInsensitiveSearch].location != NSNotFound) ||
-                ([pet.animalType rangeOfString:text options:NSCaseInsensitiveSearch].location != NSNotFound);
-        }];
-    
-        self.searchResults = [self.pets filteredArrayUsingPredicate:textSearch];}
-    }
 @end

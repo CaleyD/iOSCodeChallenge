@@ -71,4 +71,8 @@
     [self.pets setObject:[pet copy] forKey:pet.petId];
 }
 
+- (NSArray *) getAvailableAnimalTypes {
+    return @[@"Cat", @"Dog", @"Goat", @"Guinea Pig", @"Hamster", @"Horse", @"Lizard", @"Llama", @"Parrot", @"Rabbit", @"Rat", @"Snake", @"Tarantula", @"Turtle"];
+}
+
 @end

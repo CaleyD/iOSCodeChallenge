@@ -13,6 +13,7 @@
 - (nullable id)init;
 - (nonnull NSArray *) getAllPets;
 - (void) savePet:(nonnull Pet *)pet;
+- (nonnull NSArray *) getAvailableAnimalTypes;
 
 @end
 
