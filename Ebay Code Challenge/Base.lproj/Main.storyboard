@@ -219,6 +219,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="cHa-zz-EDd" firstAttribute="centerY" secondItem="Oxk-xV-zVZ" secondAttribute="centerY" id="Dyv-Tu-rRM"/>
                                         <constraint firstItem="cHa-zz-EDd" firstAttribute="centerX" secondItem="Oxk-xV-zVZ" secondAttribute="centerX" id="Ej2-q6-WVJ"/>

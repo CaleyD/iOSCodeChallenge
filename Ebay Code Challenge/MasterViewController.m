@@ -167,7 +167,7 @@
     // NOTE - purposely letting the image overflow the rounded container for effect
     img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", animalType]];
     
-    return headerView;
+    return headerView.contentView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
